@@ -1,7 +1,5 @@
 def solution(my_string, queries):
-    my_string = list(my_string)
+    array_list = list(my_string)
     for i,j in queries:
-        new_list = my_string[i:j+1]
-        new_list.reverse()
-        my_string[i:j+1] = new_list
-    return ''.join(my_string)
+        array_list[i:j+1] = array_list[i:j+1][::-1]
+    return ''.join(array_list)
